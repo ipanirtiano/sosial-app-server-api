@@ -7,6 +7,7 @@ const db = new Sequelize(
   {
     host: "bjphghark4wx1n9b1doc-mysql.services.clever-cloud.com",
     dialect: "mysql",
+    dialectModule: require("mysql2"),
   }
 );
 
