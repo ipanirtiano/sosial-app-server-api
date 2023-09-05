@@ -1,0 +1,87 @@
+// register
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "name": "Dede Amelia",
+    "email": "dede@gmail.com",
+    "password": "123456",
+    "confirmPassword": "123456"
+}
+
+// get token
+###
+GET http://localhost:3000/token
+
+// login
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "dede@gmail.com",
+    "password": "123456"
+}
+
+// logout
+###
+DELETE http://localhost:3000/logout
+
+
+// get user info
+###
+GET http://localhost:3000/user
+
+
+// get all post
+###
+GET http://localhost:3000/post
+
+
+// get post by ID
+###
+GET http://localhost:3000/profile-post
+
+// send post
+###
+POST http://localhost:3000/post
+Content-Type: application/json
+
+{
+    "desc": "Nice to meet you.",
+    "userId": 5
+}
+
+
+// add comment
+###
+POST http://localhost:3000/comments
+Content-Type: application/json
+
+{
+    "desc": "Your amazing..",
+    "postId": 16
+}
+
+// get post by POST ID
+###
+GET http://localhost:3000/comments/16
+
+
+// get like count
+###
+GET http://localhost:3000/likes/16
+
+
+// send like
+###
+POST http://localhost:3000/likes
+Content-Type: application/json
+
+{
+    "postId": 16
+}
+
+
+###
+DELETE http://localhost:3000/likes/4
