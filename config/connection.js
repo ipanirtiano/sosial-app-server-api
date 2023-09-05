@@ -1,4 +1,5 @@
 import { Sequelize } from "sequelize";
+import mysql2 from "mysql2";
 
 const db = new Sequelize(
   "bjphghark4wx1n9b1doc",
@@ -7,7 +8,7 @@ const db = new Sequelize(
   {
     host: "bjphghark4wx1n9b1doc-mysql.services.clever-cloud.com",
     dialect: "mysql",
-    dialectModule: require("mysql2"),
+    dialectModule: mysql2,
   }
 );
 
