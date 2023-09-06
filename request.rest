@@ -15,7 +15,7 @@ GET http://localhost:3000/token
 
 // login
 ###
-POST http://localhost:3000/login
+POST https://sosial-app-server-api.vercel.app/login
 Content-Type: application/json
 
 {
