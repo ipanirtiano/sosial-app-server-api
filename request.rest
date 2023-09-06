@@ -15,11 +15,11 @@ GET http://localhost:3000/token
 
 // login
 ###
-POST https://sosial-app-server-api.vercel.app/login
+POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-    "email": "dede@gmail.com",
+    "email": "ipan@gmail.com",
     "password": "123456"
 }
 
@@ -31,6 +31,18 @@ DELETE http://localhost:3000/logout
 // get user info
 ###
 GET http://localhost:3000/user
+
+// update user info
+###
+PATCH http://localhost:3000/user
+Content-Type: application/json
+
+{
+    "name": "Ipan Irtiano",
+    "email": "ipan@gmail.com",
+    "phone": "0813848770",
+    "website": "dede.github.com"
+}
 
 
 // get all post
@@ -70,12 +82,15 @@ GET http://localhost:3000/comments/16
 
 // get like count
 ###
-GET http://localhost:3000/likes/16
+GET http://localhost:3000/likes/17
 
 
-// send like
+
+
+
+// check liked
 ###
-POST http://localhost:3000/likes
+POST http://localhost:3000/check-like
 Content-Type: application/json
 
 {

@@ -1,15 +1,14 @@
 import { Sequelize } from "sequelize";
-import mysql2 from "mysql2";
+import dotenv from "dotenv";
+dotenv.config();
 
-const db = new Sequelize(
-  "bjphghark4wx1n9b1doc",
-  "ultse26m0tkak3y0",
-  "v402qvFs6JU1P1bQaGfL",
-  {
-    host: "bjphghark4wx1n9b1doc-mysql.services.clever-cloud.com",
-    dialect: "mysql",
-    dialectModule: mysql2,
-  }
-);
+const db = new Sequelize({
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  dialect: "mysql",
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+});
 
 export default db;
