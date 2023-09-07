@@ -30,7 +30,7 @@ DELETE http://localhost:3000/logout
 
 // get user info
 ###
-GET http://localhost:3000/user
+GET https://sosial-app-server-api.vercel.app/user
 
 // update user info
 ###
